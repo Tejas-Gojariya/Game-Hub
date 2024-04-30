@@ -6,6 +6,7 @@ export interface Genre {
   image_background: String;
 }
 
-const useGenres = () => useData<Genre>("/genres");
+const useGenres = () =>
+  useData<Genre>("/genres", { params: { genres: selectedGenre?.id }},[SelectedGenre.id );
 
 export default useGenres;
