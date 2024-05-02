@@ -2,7 +2,6 @@ import { useQuery } from "@chakra-ui/react";
 import apiClient from "../services/api-client";
 import { GameQuery } from "../App";
 import { FetchResponse } from "../services/api-client";
-import SearchInput from "../components/SearchInput";
 
 export interface Platform {
   id: number;
@@ -29,7 +28,7 @@ const useGames = (gamesQuery: GameQuery) =>
             genres: gamesQuery.genre?.id,
             parent_platforms: gamesQuery.platform?.id,
             ordering: gamesQuery.sortOrder,
-            search: gamesQuery.searchText, 
+            search: gamesQuery.searchText,
           },
         })
         .then(res => res.data);
