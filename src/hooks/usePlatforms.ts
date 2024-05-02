@@ -3,7 +3,7 @@ import platforms from "../data/platforms";
 import APIClient, { FetchResponse } from "../services/api-client";
 import { Platform } from "./useGames";
 
-const apiClient = new APIClient<Platform>('/platforms/lists/parents')
+const apiClient = new APIClient<Platform>("/platforms/lists/parents");
 export interface platforms {
   id: number;
   name: string;
