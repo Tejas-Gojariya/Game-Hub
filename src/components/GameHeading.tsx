@@ -9,14 +9,13 @@ interface Props {
 
 const GameHeading = ({ gameQuery }: Props) => {
   const { data: genres } = useGenres();
-  const genre = genres?.results.find((p) => p.id === gameQuery.genreId);
+  const genre = genres?.results.find((g) => g.id === gameQuery.genreId);
 
   const { data: platforms } = usePlatforms();
   const platform = platforms?.results.find(
-    (p) => p.id === gameQuery.platformId
-  );
+    (p) => p.id === gameQuery.platformId);
 
-  const heading = `${platform?.name || ""} ${
+  const heading = `${gameQuery.platformId?.name || ""} ${
     genre?.name || ""
   } Games`;
 
