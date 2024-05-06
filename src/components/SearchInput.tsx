@@ -18,7 +18,7 @@ const SearchInput = () => {
           navigate("/");
         }
       }}
-    >
+    > 
       <InputGroup>
         <InputLeftElement children={<BsSearch />} />
         <Input
