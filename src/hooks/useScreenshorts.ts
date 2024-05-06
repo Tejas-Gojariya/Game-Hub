@@ -1,14 +1,12 @@
-import { useQuery } from '@tanstack/react-query';
-import { Screenshort } from '../entities/Screenshot';
-import APIClient from '../services/api-client';
+import { useQuery } from "@tanstack/react-query";
+import Screenshort from "../entities/Screenshot";
+import APIClient from "../services/api-client";
 
 const useScreenshots = (gameId: number) => {
-  const apiClient = new APIClient<Screenshort>(
-    `/games/${gameId}/screenshots`
-  );
+  const apiClient = new APIClient<Screenshort>(`/games/${gameId}/screenshots`);
 
   return useQuery({
-    queryKey: ['screenshots', gameId],
+    queryKey: ["screenshots", gameId],
     queryFn: apiClient.getAll,
   });
 };

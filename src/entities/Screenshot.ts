@@ -1,4 +1,4 @@
-export interface Screenshort {
+export default interface Screenshort {
   id: number;
   image: string;
   width: number;

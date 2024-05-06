@@ -5,4 +5,4 @@ const usePlatform = (id?: number) => {
   return platforms?.results.find((p) => p.id === id);
 };
 
-export default usePlatforms;
+export default usePlatform;
