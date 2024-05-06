@@ -1,14 +1,7 @@
 import React from "react";
 import { ChakraBaseProvider, ColorModeScript } from "@chakra-ui/react";
-import {
-  QueryCache,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import {
-  ReactQueryDevtools,
-  ReactQueryDevtoolsPanel,
-} from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import theme from "./theme.ts";

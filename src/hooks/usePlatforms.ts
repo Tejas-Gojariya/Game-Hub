@@ -5,12 +5,6 @@ import { Platform } from "./useGames";
 import ms from "ms";
 
 const apiClient = new APIClient<Platform>("/platforms/lists/parents");
-export interface platforms {
-  id: number;
-  name: string;
-  slug: string;
-}
-
 const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
